@@ -13,3 +13,9 @@ Cat wiki app built using the following:
 - User story: On mobile, when I select the search option, a modal for breed search should pop up
 - User story (optional): I can go to an article about cats when I click read more on Why you should have a cat section
 - User story (optional): I can go to the top 10 cats by clicking see more in the dashboard
+
+## Goals
+- Improve typescript knowledge by learning and using new things, and improving on older skills
+- Use axios better
+- Read up on css skeletal layouts
+- Read typescript crash course 

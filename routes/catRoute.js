@@ -1,18 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const axios = require('axios')
+const catControllers = require('../controllers/catController')
 
 router.route('/')
-    .get(async (req, res) => {
-        try {
-            const response = await axios.get('https://api.thecatapi.com/v1/favourites')
-            console.log(response.data);
-            res.send(response.data)
-        } catch (error) {
-            console.log(error.response.data)
-            res.send(error.response.data)
-        }
-    })
+    .get(catControllers.getTopTen)
 
 module.exports = router
 
