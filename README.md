@@ -18,4 +18,5 @@ Cat wiki app built using the following:
 - Improve typescript knowledge by learning and using new things, and improving on older skills
 - Use axios better
 - Read up on css skeletal layouts
-- Read typescript crash course 
+- Read typescript crash course
+- Learn how to add fonts to tailwind css 

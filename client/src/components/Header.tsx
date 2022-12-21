@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom'
 import catWikiLogo from '../assets/CatWikiLogo.svg'
 
 const Header = () => {
     return (
-        <header className=''>
-            <img src={catWikiLogo} alt="" />
+        <header className='mb-4'>
+            <Link to='/'><img src={catWikiLogo} alt="" /></Link>
         </header>
     )
 }
