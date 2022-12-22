@@ -26,8 +26,8 @@ const Breeds = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-x-4 gap-y-6 pt-10 pb-10 ">
-                {breeds.map((breed: { name: string, image: { url: string } }) => (
-                    <div className="">
+                {breeds.map((breed: { id: string, name: string, image: { url: string } }) => (
+                    <div className="" key={breed.id}>
                         <img src={breed.image?.url} alt={breed.name} className="h-[130px] object-cover w-full rounded-lg" />
                         <p className="mt-3 font-semibold">{breed.name}</p>
                     </div>

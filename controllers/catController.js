@@ -7,6 +7,7 @@ let config = {
 }
 
 const getBreeds = async (req, res) => {
+    console.log('api hit');
     const { limit, page } = req.query
     try {
         const response = await axios.get(`https://api.thecatapi.com/v1/breeds?limit=${limit}&page=${page}&order=RAND`, config)

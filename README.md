@@ -1,22 +1,37 @@
-# Cat wiki app
-Cat wiki app built using the following:
+# Cat wiki app built with
+- Vite
 - React
 - Typescript
+- Tailwindcss
 - Express
+- Cat wiki rest api _link here_
 
-## User stories
-- User story: I can search for cat breeds and select a breed of my choice
-- User story: I can see the most popular searched cat breeds summary on the homepage
-- User story: I can see the top 10 most searched cat breeds
-- User story: I can see the breed details including description, temperament, origin, life span, adaptability, affection level, child-friendly, grooming, intelligence, health issues, social needs, stranger friendly
-- User story: I can see more photo of the breed
-- User story: On mobile, when I select the search option, a modal for breed search should pop up
-- User story (optional): I can go to an article about cats when I click read more on Why you should have a cat section
-- User story (optional): I can go to the top 10 cats by clicking see more in the dashboard
+## How I worked on this project
+- I built the app using figma designs from devChallenges.io _link here_
+- I used the user stories from the challenges
 
-## Goals
-- Improve typescript knowledge by learning and using new things, and improving on older skills
-- Use axios better
-- Read up on css skeletal layouts
-- Read typescript crash course
-- Learn how to add fonts to tailwind css 
+## How to navigate this project
+- This application fetches data from the cat api. Examples for _the request_ and _data transformation_
+
+## Why I built the project this way
+- This is to reinforce and practise my data fetching skills using express js and serving the code to the backend
+- I did not use a state management library. Places where I needed global state, I used react context hook
+- This is more focused on the frontend but my plan is to continue practising and developing both my frontend and backend skills.
+
+## Libraries used
+### Frontend
+- React router: I used this to create the dynamic pages when users click on a cat to see more information
+- 
+### Backend
+- Axios: I used axios to handle my get requests.
+
+## If I had more time
+- Build and deploy my own api
+- Refactor some of the code. Especially this part
+
+## Available scripts
+In the project directory you can run:
+
+`npm install && npm run server && cd client && npm install && npm run dev`
+
+That will install all the necessary dependancies and start the server and client.

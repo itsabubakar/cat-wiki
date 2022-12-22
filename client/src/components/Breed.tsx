@@ -2,8 +2,11 @@ import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from 'axios'
 import Header from "./Header"
-import { AppContext } from "../App"
 import Rating from "./Rating"
+
+type Image = {
+    url: string
+}
 
 type Breed = {
     name: string,
@@ -24,9 +27,10 @@ type Breed = {
 }
 
 const Breed = () => {
-    const [breed, setBreed] = useState<Breed>()
-    const [images, setImages] = useState([])
     const { id } = useParams()
+    const [breed, setBreed] = useState<Breed>()
+    const [images, setImages] = useState()
+    const [image, setImage] = useState<Image>()
     const [loading, setLoading] = useState(false)
 
 
@@ -45,8 +49,9 @@ const Breed = () => {
         const imgId = id[1]
         const response = await axios.get(`http://localhost:8080/api/images?imgId=${imgId}`)
             .then((resp) => {
-                setImages(resp.data)
+                setImage(resp.data[0])
                 setLoading(false)
+
             })
             .catch((err) => {
                 console.log(err)
@@ -61,11 +66,10 @@ const Breed = () => {
     return (
         <div>
             <Header />
-
             {loading && <div>Loading</div>}
             {!loading && <div>
                 <section>
-                    <img src={images[1]?.url} alt={id} className="mb-4 w-[300px] h-[300px] object-cover rounded-2xl" />
+                    <img src={image?.url} alt={id} className="mb-4 w-[300px] h-[300px] object-cover rounded-2xl" />
                     <div>
                         <h2 className="text-2xl font-medium mb-4">{breed?.name}</h2>
                         <p className="text-lg mb-4 leading-6">{breed?.description}</p>
