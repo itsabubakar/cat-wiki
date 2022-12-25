@@ -4,14 +4,14 @@ type Row = {
 
 const Rating = ({ row }: Row) => {
     let arr = []
-    let arrRow = row
+    let arrRow = row - 1
     for (let i = 0;i < 5;i++) {
         arr.push(i)
     }
 
     return <>
         {arr.map((rating, index) => {
-            return <span key={index} className={`block w-5 h-2 rounded-lg mx-1 my-4 ${index <= arrRow ? 'bg-[#544439]' : 'bg-[#E0E0E0]'}`}></span>
+            return <span key={index} className={`block w-5 h-2 lg:w-12 rounded-lg mx-1 my-4 ${index <= arrRow ? 'bg-[#544439]' : 'bg-[#E0E0E0]'}`}></span>
         })}
     </>
 

@@ -22,7 +22,7 @@ const App = () => {
   const [breeds, setBreeds] = useState([])
 
   return (
-    <div className='my-5 mx-5'>
+    <div className='mt-5 mx-5'>
       <AppContext.Provider value={{
         breeds,
         setBreeds
@@ -35,7 +35,6 @@ const App = () => {
           </Routes>
         </Router>
       </AppContext.Provider>
-
       <Footer />
     </div>
 
