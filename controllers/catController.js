@@ -6,6 +6,18 @@ let config = {
     }
 }
 
+const getBreedsName = async (req, res) => {
+    try {
+        console.log('Trying');
+        const response = await axios.get(`https://api.thecatapi.com/v1/breeds`, config)
+        const nameArr = response.data.map((resp) => {
+            return { "name": resp.name, id: resp.id }
+        })
+        res.send(nameArr)
+    } catch (error) {
+        console.log(error)
+    }
+}
 const getBreeds = async (req, res) => {
     console.log('api hit');
     const { limit, page } = req.query
@@ -38,6 +50,7 @@ const getBreedImages = async (req, res) => {
 }
 
 module.exports = {
+    getBreedsName,
     getBreeds,
     getBreed,
     getBreedImages

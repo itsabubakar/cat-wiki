@@ -13,4 +13,9 @@ router.route('/breed')
 router.route('/images')
     .get(catControllers.getBreedImages)
 
+
+// get breed images
+router.route('/names')
+    .get(catControllers.getBreedsName)
+
 module.exports = router
