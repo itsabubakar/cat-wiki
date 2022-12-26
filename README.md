@@ -21,7 +21,6 @@
 ## Libraries used
 ### Frontend
 - React router: I used this to create the dynamic pages when users click on a cat to see more information
-- 
 ### Backend
 - Axios: I used axios to handle my get requests.
 - Cors
@@ -29,7 +28,6 @@
 
 ## If I had more time
 - Build and deploy my own api
-- Refactor some of the code. Especially this part
 
 ## Available scripts
 In the project directory you can run:
